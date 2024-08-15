@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('style.css');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --poppins: 'Poppins';
+    --helvetica: 'Helvetica';
+    --light-gray: #e6e6e6;
+}
+
+.scroll-top {
+    width: 45px;
+    height: 45px;
+    background-color: red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.toggle-mode {
+    width: 60px;
+    height: 50px;
+    position: fixed;
+    left: 0;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    background-color: rebeccapurple;
+    z-index: 9;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.top-wrapper {
+    margin-top: 30px;
+    position: relative;
+}
+
+.cover-photo {
+    width: 100%;
+    height: 350px;
+    background-color: red;
+    border-radius: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    bottom: -40px;
+    left: 50px;
+}
+
+.profile .photo {
+    width: 200px;
+    height: 200px;
+    border: 2px solid green;
+    background-color: yellow;
+    border-radius: 50%;
+}
+
+.profile .name {
+    font-family: var(--poppins);
+    margin-bottom: 30px;
+}
+
+.profile .name h1 {
+    font-weight: 600;
+}
+
+.profile .name h5 {
+    font-weight: 600;
+}
+
+.content-wrapper {
+    padding-top: 70px;
+    position: relative;
+}
+
+.content-wrapper .card {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.content-wrapper .card-header {
+    padding: 15px 15px 0px 15px;
+    font-family: var(--poppins);
+}
+
+
+.bio {
+    margin: 20px 0 0 0;
+}
+
+.content-wrapper ul {
+    margin-top: 10px;
+}
+
+.content-wrapper ul li {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: var(--helvetica);
+}
+
+.content-wrapper ul li i {
+    margin-top: 3px;
+    font-size: 18px;
+}
+
+.content-wrapper .left-panel {
+    position: sticky;
+    top: 0;
+    padding-top: 30px;
+}
+
+.content-wrapper .right-panel {
+    padding-top: 30px;
+}
+
+
+.skills {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills .item {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 20px;
+    background-color: var(--light-gray);
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.project-sort {
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 20px;
+    background-color: var(--light-gray);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.project-view {
+    display: flex;
+    margin-top: 10px;
+}
+
+.project-view div {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-family: var(--poppins);
+    text-transform: uppercase;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.project-view div.active {
+    border-bottom: 4px solid red;
+    font-weight: 600;
+}
+
+.projects .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 15px;
+}
+
+.projects .project-control {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.projects .project-control:hover {
+    background-color: var(--light-gray);
+}
+
+.projects .card-header .image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.projects .card-header .info h6 {
+    font-family: var(--poppins);
+    font-weight: 600;
+}
+
+.projects .card-header .info p {
+    font-size: 14px;
+    margin-top: 3px;
+    font-weight: 500;
+}
+
+.projects .caption {
+    font-family: var(--helvetica);
+    font-size: 18px;
+}
+
+.projects .image-attachments {
+    width: 100%;
+    max-height: 500px;
+    height: 300px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.projects .image-attachments .row {
+    height: 100%;
+}
+
+.projects .image-attachments .row > * {
+    padding: 3px;
+}
+
+.projects .image-attachments .image {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px solid red;
+    background-color: red;
+}
+
+.testimonials {
+    position: relative;
+}
+
+.testimonials .item {
+    padding: 10px;
+    position: relative;
+}
+
+.testimonials .item .testimony {
+    text-indent: 30px;
+    font-family: var(--helvetica)
+}
+
+.testimonials .item .testimony::before {
+    content: '\201C';
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    font-size: 40px;
+}
+
+.testimonials .rate {
+    margin-top: 10px;
+}
+
+.testimony-by {
+    margin-top: 30px;
+    font-family: var(--poppins);
+    text-transform: uppercase;
+    float: right;
+}
+
+.testimony-by h6 {
+    text-decoration: underline;
+    font-family: var(--poppins);
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+}
+
+.testimony-by p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 6px;
+    font-family: var(--poppins);
+}
+
+.inquiry {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.inquiry button {
+    width: 100%;
+    padding: 18px 0 18px 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    border: 1px solid red;
+    font-family: var(--poppins);
+    font-weight: 500;
+}
+
+.inquiry button i {
+    margin-right: 6px;
+}
+
+.inquiry .btn-hire {
+    background-color: transparent;
+}
+
+.inquiry .btn-ask {
+    color: #fff;
+    background-color: red;
+}
+
+.bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    font-family: var(--helvetica);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media(min-width: 0px) and (max-width: 768px) {
+    
+    .cover-photo {
+        height: 250px;
+    }
+
+    .profile {
+        gap: 15px;
+        left: 20px;
+    }
+
+    .profile .photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile .name h1 {
+        font-size: 22px;
+    }
+
+    .profile .name h5 {
+        font-size: 15px;
+    }
+}
